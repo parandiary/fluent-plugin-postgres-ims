@@ -66,7 +66,8 @@ class Fluent::Plugin::PostgresOutput < Fluent::Plugin::Output
     PG::Connection.new({
       :host => @host, :port => @port,
       :user => @username, :password => @password,
-      :dbname => @database
+      :dbname => @database,
+      :options => "-c readOnly=true" # Set readOnly to true
     })
   end
 
