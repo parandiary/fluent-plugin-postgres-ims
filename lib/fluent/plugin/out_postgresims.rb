@@ -62,17 +62,22 @@ class Fluent::Plugin::PostgresimsOutput < Fluent::Plugin::Output
     true
   end
 
-  def client
-    PG::Connection.new({
-      :host => @host, 
-      :port => @port,
-      :options => " -c readOnly=1 ",
-      :dbname => @database,
-      :user => @username, 
-      :password => @password
-    })
-  end
+#  def client
+#    PG::Connection.new({
+#      :host => @host, 
+#      :port => @port,
+#      :options => " -c readOnly=1 ",
+#      :dbname => @database,
+#      :user => @username, 
+#      :password => @password
+#    })
+#  end
   # :options => "-c readOnlyMode=ignore" # Set readOnly to true
+
+  def client
+    connection_url = "postgresql://#{@username}:#{@password}@#{@host}:#{@port}/#{@database}?readOnlyMode=always"
+    PG.connect(connection_url)
+  end
 
   def write(chunk)
     handler = self.client
