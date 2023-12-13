@@ -68,10 +68,10 @@ class Fluent::Plugin::PostgresimsOutput < Fluent::Plugin::Output
       :port => @port,
       :user => @username, :password => @password,
       :dbname => @database,
-      # :options => "-c readOnlyMode=ignore" # Set readOnly to true
-      :options => "-c readOnly=true" # Set readOnly to true
+      :options => "-c readOnly=1"
     })
   end
+  # :options => "-c readOnlyMode=ignore" # Set readOnly to true
 
   def write(chunk)
     handler = self.client

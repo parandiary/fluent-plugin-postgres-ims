@@ -10,6 +10,7 @@ echo '===============  td-agent-gem process ====================================
 td-agent-gem build fluent-plugin-postgres-ims.gemspec
 td-agent-gem install fluent-plugin-postgres-ims-0.1.1.gem
 td-agent-gem list | grep ims
+systemctl restart td-agent
 
 
 echo ''
