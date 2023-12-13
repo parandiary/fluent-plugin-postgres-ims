@@ -1,6 +1,10 @@
 #!/bin/bash
 
+git fetch --all
+git reset --hard origin/master
 git pull
+
+
 
 gem build fluent-plugin-postgres-ims.gemspec
 
