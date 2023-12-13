@@ -67,7 +67,7 @@ class Fluent::Plugin::PostgresimsOutput < Fluent::Plugin::Output
       :host => @host, :port => @port,
       :user => @username, :password => @password,
       :dbname => @database,
-      :options => "-c readOnly=false" # Set readOnly to true
+      :options => "-c readOnly=true" # Set readOnly to true
     })
   end
 
