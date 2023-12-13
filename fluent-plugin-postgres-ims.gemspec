@@ -2,10 +2,10 @@
 Gem::Specification.new do |s|
   s.name          = 'fluent-plugin-postgres-ims'
   s.version       = '0.1.0'
-  s.authors       = ['TAGOMORI Satoshi', 'Diogo Terror', 'pitr']
-  s.email         = ['team@uken.com']
-  s.description   = %q{fluent plugin to insert on PostgreSQL}
-  s.summary       = %q{fluent plugin to insert on PostgreSQL}
+  s.authors       = ['hhchoi']
+  s.email         = ['parandiary@gmail.com']
+  s.description   = %q{fluent plugin to insert on PostgreSQL (add readonly option coffig)}
+  s.summary       = %q{fluent plugin to insert on PostgreSQL (add readonly option coffig)}
   s.homepage      = 'https://github.com/parandiary/fluent-plugin-postgres-ims'
   s.license       = 'Apache-2.0'
 
