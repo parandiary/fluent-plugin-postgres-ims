@@ -64,10 +64,11 @@ class Fluent::Plugin::PostgresimsOutput < Fluent::Plugin::Output
 
   def client
     PG::Connection.new({
-      :host => @host, :port => @port,
+      :host => @host, 
+      :port => @port,
       :user => @username, :password => @password,
       :dbname => @database,
-      :options => "-c readOnly=true" # Set readOnly to true
+      :options => "-c readOnlyMode=ignore" # Set readOnly to true
     })
   end
 
