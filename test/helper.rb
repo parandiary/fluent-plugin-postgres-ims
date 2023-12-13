@@ -24,7 +24,7 @@ unless ENV.has_key?('VERBOSE')
   $log = nulllogger
 end
 
-require 'fluent/plugin/out_postgres'
+require 'fluent/plugin/out_postgresims'
 
 class Test::Unit::TestCase
   include Fluent::Test::Helpers

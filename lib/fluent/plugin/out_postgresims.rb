@@ -1,8 +1,8 @@
 require 'fluent/plugin/output'
 require 'pg'
 
-class Fluent::Plugin::PostgresIMSOutput < Fluent::Plugin::Output
-  Fluent::Plugin.register_output('postgres-ims', self)
+class Fluent::Plugin::PostgresimsOutput < Fluent::Plugin::Output
+  Fluent::Plugin.register_output('postgresims', self)
 
   helpers :inject, :compat_parameters
 
