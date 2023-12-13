@@ -11,6 +11,7 @@ class Fluent::Plugin::PostgresimsOutput < Fluent::Plugin::Output
   config_param :database, :string
   config_param :username, :string
   config_param :password, :string, :default => ''
+  config_param :options, :string
 
   config_param :key_names, :string, :default => nil # nil allowed for json format
   config_param :sql, :string, :default => nil
@@ -75,7 +76,7 @@ class Fluent::Plugin::PostgresimsOutput < Fluent::Plugin::Output
   # :options => "-c readOnlyMode=ignore" # Set readOnly to true
 
   def client
-    connection_url = "postgresql://#{@username}:#{@password}@#{@host}:#{@port}/#{@database}?readOnlyMode=always"
+    connection_url = "postgresql://#{@username}:#{@password}@#{@host}:#{@port}/#{@database}?#{@options}"
     PG.connect(connection_url)
   end
 
