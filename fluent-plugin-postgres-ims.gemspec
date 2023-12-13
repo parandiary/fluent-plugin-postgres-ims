@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
   s.name          = 'fluent-plugin-postgres-ims'
-  s.version       = '0.1.0'
+  s.version       = '0.1.1'
   s.authors       = ['hhchoi']
   s.email         = ['parandiary@gmail.com']
   s.description   = %q{fluent plugin to insert on PostgreSQL (add readonly option coffig)}

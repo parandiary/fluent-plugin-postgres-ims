@@ -1,5 +1,8 @@
 # fluent-plugin-postgres, a plugin for [Fluentd](http://fluentd.org)
 
+## NOT WORK YET!!!
+
+
 ## Installation:
 
 - Prereq: Install postgresql headers: `apt-get install libpq-dev`
